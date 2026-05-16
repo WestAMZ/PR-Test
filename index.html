@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog de Tecnología</title>
+    <style>
+        :root{--accent:#0b74de;--muted:#6b7280;--bg:#0f1724}
+        *{box-sizing:border-box}
+        body{font-family:Inter,system-ui,Segoe UI,Roboto,Arial,sans-serif;margin:0;color:#0f1724;background:#f8fafc}
+        header{background:#ffffff;border-bottom:1px solid #e6eef8;position:sticky;top:0;z-index:50}
+        .container{max-width:1100px;margin:0 auto;padding:0 20px}
+        .nav{display:flex;align-items:center;justify-content:space-between;height:64px}
+        .brand{display:flex;align-items:center;gap:12px;font-weight:700;color:var(--accent);text-decoration:none}
+        .brand .logo{width:38px;height:38px;background:linear-gradient(135deg,var(--accent),#7cc4ff);border-radius:8px;display:inline-block}
+        nav ul{display:flex;gap:18px;list-style:none;margin:0;padding:0}
+        nav a{color:#0f1724;text-decoration:none;font-weight:600}
+        .nav-right{display:flex;align-items:center;gap:12px}
+        .btn{display:inline-block;padding:10px 16px;border-radius:8px;border:0;cursor:pointer}
+        .btn--ghost{background:transparent;color:var(--accent);border:1px solid rgba(11,116,222,.14)}
+        .btn--primary{background:var(--accent);color:#fff;box-shadow:0 6px 20px rgba(11,116,222,.18)}
+        .hero{background:linear-gradient(90deg,#eef6ff 0%, #ffffff 60%);padding:56px 0}
+        .hero-grid{display:flex;gap:32px;align-items:center}
+        .hero h1{font-size:36px;margin:0 0 14px}
+        .hero p{color:var(--muted);margin:0 0 22px}
+        .jumbotron{background:linear-gradient(180deg,var(--accent),#2b9cff);color:#fff;padding:28px;border-radius:12px;display:inline-block}
+        main{display:grid;grid-template-columns:1fr 320px;gap:32px;padding:40px 0}
+        .posts article{background:#fff;border-radius:10px;padding:18px;margin-bottom:18px;border:1px solid #eef2f7}
+        .posts h3{margin:0 0 8px}
+        aside{background:#fff;border-radius:10px;padding:18px;border:1px solid #eef2f7}
+        footer{padding:28px 0;color:var(--muted);text-align:center}
+        @media(max-width:900px){.hero-grid{flex-direction:column;text-align:center}.container{padding:0 16px}main{grid-template-columns:1fr}}
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container nav">
+            <a class="brand" href="/">
+                <span class="logo" aria-hidden="true"></span>
+                BlogTech
+            </a>
+            <nav aria-label="Principal">
+                <ul>
+                    <li><a href="/">Inicio</a></li>
+                    <li><a href="Entradas/">Entradas</a></li>
+                    <li><a href="Entradas/Categorias/">Categorías</a></li>
+                    <li><a href="#contact">Contacto</a></li>
+                </ul>
+            </nav>
+            <div class="nav-right">
+                <a class="btn btn--ghost" href="Entradas/">Ver todas</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <div class="hero-grid">
+                <div style="flex:1">
+                    <h1>Ideas, tutoriales y novedades en tecnología</h1>
+                    <p>Explora artículos sobre desarrollo, infraestructuras, IA y más. Contenido claro y práctico para profesionales y entusiastas.</p>
+                    <div class="jumbotron" role="region" aria-label="Última entrada">
+                        <strong>Última entrada:</strong>
+                        <div style="margin-top:8px;display:flex;gap:12px;align-items:center;flex-wrap:wrap">
+                            <div style="min-width:220px">
+                                <div style="font-weight:700">Bienvenido al blog</div>
+                                <div style="font-size:13px;color:rgba(255,255,255,.9)">Una introducción a los objetivos y la temática.</div>
+                            </div>
+                            <a class="btn btn--primary" href="Entradas/Bienvenido.html">Leer ahora</a>
+                        </div>
+                    </div>
+                </div>
+                <div style="width:320px">
+                    <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=60" alt="Código en pantalla" style="width:100%;border-radius:10px;display:block">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <main class="container">
+        <section class="posts">
+            <h2>Publicaciones recientes</h2>
+            <article>
+                <h3><a href="Entradas/Bienvenido.html">Bienvenido al blog</a></h3>
+                <p class="meta" style="color:var(--muted);margin:6px 0 10px">Publicado el 15 mayo, 2026 · 4 min</p>
+                <p>Resumen breve de la entrada de bienvenida. Explicamos qué encontrarás en el blog y cómo aprovechar el contenido.</p>
+            </article>
+            <article>
+                <h3><a href="#">Próxima entrada: Guía de inicio rápido con herramientas modernas</a></h3>
+                <p style="color:var(--muted);margin:6px 0 10px">Publicado el 1 mayo, 2026 · 6 min</p>
+                <p>Descripción corta de la guía para configurar un entorno de desarrollo moderno.</p>
+            </article>
+        </section>
+
+        <aside>
+            <h3>Categorías</h3>
+            <ul style="padding-left:18px;color:var(--muted)">
+                <li><a href="Entradas/Categorias/">Desarrollo Web</a></li>
+                <li><a href="Entradas/Categorias/">DevOps</a></li>
+                <li><a href="Entradas/Categorias/">Inteligencia Artificial</a></li>
+                <li><a href="Entradas/Categorias/">Reseñas</a></li>
+            </ul>
+            <hr style="margin:14px 0;border:none;border-top:1px solid #eef2f7">
+            <h3>Suscríbete</h3>
+            <p style="color:var(--muted);margin:8px 0">Recibe las últimas entradas en tu correo.</p>
+            <form action="#" onsubmit="alert('Gracias por suscribirte');return false">
+                <input type="email" placeholder="tu@correo.com" required style="width:100%;padding:10px;border-radius:8px;border:1px solid #e6eef8;margin-bottom:8px">
+                <button class="btn btn--primary" style="width:100%">Suscribirse</button>
+            </form>
+        </aside>
+    </main>
+
+    <footer>
+        <div class="container">
+            <small>© 2026 BlogTech · Hecho con ❤️ · <a href="#">Aviso legal</a></small>
+        </div>
+    </footer>
+
+</body>
+</html>
